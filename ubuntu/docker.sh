@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Remove old packages
 apt-get remove -y docker docker-engine docker.io containerd runc
 
 apt-get install -y \
@@ -17,3 +18,6 @@ add-apt-repository \
    stable"
 
 apt-get update && apt-get install -y docker-ce
+
+# Enable docker without sudo
+sudo usermod -a -G docker $USER
