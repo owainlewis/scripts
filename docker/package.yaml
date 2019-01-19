@@ -1,0 +1,4 @@
+name: docker-ce
+description: Install Docker CE
+distros:
+  - ubuntu
